@@ -1,11 +1,12 @@
 import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react';
-import { MousePosition } from '../lib/context';
+import { MousePosition, ScrollPosition, WindowSize } from '../lib/context';
 import { Toaster } from 'react-hot-toast';
+import { useWindowSize } from '../lib/hooks';
+import { StickyNavbar } from '../components/StickyNavbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
-
     // Context for mouse position
     const [x, setX] = useState<number>(0)
     const [y, setY] = useState<number>(0)
@@ -22,10 +23,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         }
     }, [setX, setY]);
 
+    // Context for scroll position
+    const [scroll, setScroll] = useState(0)
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScroll(position)
+    }
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    })
+    
+    // Context for window size
+    const windowSize = useWindowSize()
+
     return <>
+        <WindowSize.Provider value={windowSize}>
+        <ScrollPosition.Provider value={scroll}>
         <MousePosition.Provider value={{x:x,y:y}}>
+            <StickyNavbar />
             <Component {...pageProps} />
         </MousePosition.Provider>
+        </ScrollPosition.Provider>
+        </WindowSize.Provider>
         <Toaster />
     </>
 }

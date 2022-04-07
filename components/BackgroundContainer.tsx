@@ -11,24 +11,34 @@
  * - Full width opaque container for general overlay content
  */
 import { FC, useContext } from "react";
-import { MousePosition } from "../lib/context";
-
+import { MousePosition, ScrollPosition, WindowSize } from "../lib/context";
+const wiggleRoom = 18
 interface BgProps {
     background: string;
     height?: string;
     children: JSX.Element | JSX.Element[];
+    invertMouseEffect?: boolean;
 }
-export const BackgroundContainer: FC<BgProps> = ({background, children, height}) => {
+export const BackgroundContainer: FC<BgProps> = ({background, children, height, invertMouseEffect = false}) => {
     const mouse = useContext(MousePosition)
+    const wsize = useContext(WindowSize)
+    const scroll = useContext(ScrollPosition)
+
+    const xOffset = ((mouse.x-wsize.width/2)/wsize.width) * wiggleRoom * (invertMouseEffect?1:-1)
+    const yOffset = ((mouse.y-wsize.height/2)/wsize.height) * wiggleRoom * (invertMouseEffect?1:-1)
+    // parallax
+    const pOffset = scroll*0.13
 
     return (
         <div
             style={{
-                position: 'relative',
                 width: '100%',
+                position: 'relative',
                 height: height,
-                background: `url('${background}') no-repeat center`,
-                backgroundSize: '110%',
+                background: `url('${background}') repeat center`,
+                backgroundSize: '111%',
+                backgroundPositionX: xOffset - wiggleRoom/2,
+                backgroundPositionY: (yOffset - wiggleRoom/2) + pOffset
             }}
         >
             {children}

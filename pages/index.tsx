@@ -31,6 +31,7 @@ const Home: NextPage = () => {
 
                 <BackgroundContainer
                     background='/background2.jpg'
+                    invertMouseEffect
                 >
                     <BackgroundContentContainer>
                         <Container maxWidth='md'>

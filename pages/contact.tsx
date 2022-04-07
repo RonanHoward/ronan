@@ -27,7 +27,10 @@ const Contact: NextPage = ({ }) => {
 
                 <Spacer height='210px' />
             </BackgroundContainer>
-            <BackgroundContainer background='/background1.jpg'>
+            <BackgroundContainer
+                background='/background1.jpg'
+                invertMouseEffect
+            >
                 <BackgroundContentContainer>
                     <h1>Write a message for me</h1>
                     <p style={{fontSize:'0.9em',color:'#666666'}}>
