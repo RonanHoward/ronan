@@ -61,7 +61,12 @@ footer {
     display: flex;
     flex-direction: column;
     font-size: 1em;
-    a { margin: 0 auto }
+    a {
+        margin: 0 auto;
+        &:after {
+            background: #ffffff !important;
+        }
+    }
 }
 
 .afterUnderline {
