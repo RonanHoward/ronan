@@ -1,2 +1,2 @@
 # Ronan Howard's website
-Availible at [ronanhoward.com](https://ronanhoward.com)
+Available at [ronanhoward.com](https://ronanhoward.com)
