@@ -1,7 +1,7 @@
 import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react';
-import { MousePosition, ScrollPosition, WindowSize } from '../lib/context';
+import { IsMobile, MousePosition, ScrollPosition, WindowSize } from '../lib/context';
 import { Toaster } from 'react-hot-toast';
 import { useWindowSize } from '../lib/hooks';
 import { StickyNavbar } from '../components/StickyNavbar';
@@ -38,14 +38,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     const windowSize = useWindowSize()
 
     return <>
+        <IsMobile.Provider value={windowSize.width < 760}>
         <WindowSize.Provider value={windowSize}>
         <ScrollPosition.Provider value={scroll}>
         <MousePosition.Provider value={{x:x,y:y}}>
+
             <StickyNavbar />
             <Component {...pageProps} />
+            
         </MousePosition.Provider>
         </ScrollPosition.Provider>
         </WindowSize.Provider>
+        </IsMobile.Provider>
+
         <Toaster />
     </>
 }

@@ -1,6 +1,5 @@
 import { NextPage } from "next"
 // Comps
-import Image from 'next/image'
 import { BackgroundContainer, BackgroundContentContainer } from "../components/BackgroundContainer"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
