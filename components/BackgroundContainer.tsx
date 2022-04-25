@@ -36,7 +36,7 @@ export const BackgroundContainer: FC<BgProps> = ({background, children, height, 
                 position: 'relative',
                 height: height,
                 background: `url('${background}') repeat center`,
-                backgroundSize: '111%',
+                backgroundSize: 'cover',
                 backgroundPositionX: xOffset - wiggleRoom/2,
                 backgroundPositionY: (yOffset - wiggleRoom/2) + pOffset
             }}
@@ -55,9 +55,10 @@ export const BackgroundCenterContainer: FC<bgccProps> = ({children, includeConte
         <div
             style={{
                 position: 'absolute',
-                top: '50%',
+                top: '60%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
+                textAlign: 'center'
             }}
         >
             {
