@@ -11,7 +11,7 @@ export const StickyNavbar: FC = ({ }) => {
             position: 'fixed',
             top: '0',
             left: '0',
-            width: '100%',
+            width: '100vw',
             zIndex: '9999',
             overflow: 'hidden',
             height: show?'':'0',
@@ -19,13 +19,19 @@ export const StickyNavbar: FC = ({ }) => {
             transition: 'height 0.4s, padding 0.4s'
         }}>
             <Link href='/' passHref>
-                <a className='sticky navLink afterUnderline'>Home</a>
+                <a
+                    className='sticky navLink afterUnderline'
+                >Home</a>
             </Link>
             <Link href='https://github.com/RonanHoward' passHref>
-                <a className='sticky navLink afterUnderline'>GitHub</a>
+                <a
+                    className='sticky navLink afterUnderline'
+                >GitHub</a>
             </Link>
             <Link href='/contact' passHref>
-                <a className='sticky navLink afterUnderline'>Contact</a>
+                <a
+                    className='sticky navLink afterUnderline'
+                >Contact</a>
             </Link>
         </nav>
     )

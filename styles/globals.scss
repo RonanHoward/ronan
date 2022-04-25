@@ -4,8 +4,11 @@
 }
 
 html, body {
-    padding: 0; 
-    margin: 0;  
+    width: 100%;
+    height: auto;
+    padding: 0px; 
+    margin: 0px;
+    overflow-x: hidden;
     font-family: Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxyge n,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
