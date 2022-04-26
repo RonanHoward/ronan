@@ -41,17 +41,19 @@ export const BackgroundContainer: FC<BgProps> = ({background, children, height, 
         >
             <div
                 style={{
-                    height: `calc(${height} + 10%)`,
+                    height: `110%`,
                     width: '110%',
-                    position: 'relative',
+                    position: 'absolute',
+                    top: '0',
+                    zIndex: '-1',
+                    left: '0',
                     background: `url('${background}') repeat center`,
                     backgroundSize: 'cover',
                     backgroundPositionX: xOffset - wiggleRoom/2,
                     backgroundPositionY: (yOffset - wiggleRoom/2) + pOffset
                 }}
-            >
-                {children}
-            </div>
+            />
+            {children}
         </div>
     )
 }

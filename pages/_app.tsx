@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // Context for window size
     const windowSize = useWindowSize()
 
-    return <div style={{width:'100%'}}>
+    return <>
         <IsMobile.Provider value={windowSize.width < 760}>
         <WindowSize.Provider value={windowSize}>
         <ScrollPosition.Provider value={scroll}>
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </IsMobile.Provider>
 
         <Toaster />
-    </div>
+    </>
 }
 
 export default MyApp
