@@ -49,7 +49,6 @@ const Contact: NextPage = ({ }) => {
                             label="Name"
                             onChange={(e) => {
                                 setName(e.target.value)
-
                             }}
                         />
                         <TextField

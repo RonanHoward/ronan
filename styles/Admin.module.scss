@@ -1,0 +1,31 @@
+.aptContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #eeeeee;
+    margin: 13px;
+    border-radius: 5px;
+    padding: 15px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        
+        span { padding: 4px 7px; }
+
+        &:nth-child(1) span {
+            padding-right: 15px;
+            border-radius: 4px 0 0 4px;
+        }
+        &:nth-child(2) {
+            width: 100%;
+            span {
+                border-radius: 0 4px 4px 0;
+            }
+        }
+
+        span:nth-child(2n-1) {
+            background-color: #cccccc;
+        }
+    }
+}

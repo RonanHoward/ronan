@@ -112,4 +112,10 @@ button {
         transition: background-color 0.4s;
         &:hover { background-color: rgb(111, 10, 10); }
     }
+    &.gray {
+        color: #000000;
+        background: #eeeeee;
+        transition: background-color 0.4s;
+        &:hover { background-color: #cccccc; }
+    }
 }

@@ -14,7 +14,7 @@ export const Footer:FC = ({ }) => {
                 <a className='afterUnderline'>stackoverflow.com/users/17646964/ronan-howard</a>
             </Link>
             <span style={{marginTop:'5px'}}>Designed and Programmed from scratch by Ronan C. Howard -2022</span>
-            <span>Last Updated - 4/25/22</span>
+            <span>Last Updated - 4/26/22</span>
         </footer>
     )
 }

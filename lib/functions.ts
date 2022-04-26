@@ -12,14 +12,14 @@ const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@
 export const str = (str: string | undefined | null) => { return str?str:'' }
 
 /**
- * Returns whether or not to switch to mobile format
+ * Returns whether or not to switch to mobile format based off of the page width
  * @param pageWidth 
  * @returns boolean whether user is in mobile dimensions or not
  */
 export const isMobile = (pageWidth:number) => { return pageWidth <= 768 }
 
 /**
- * 
+ * Sends a contact message to the firestore database
  * @param name 
  * @param email 
  * @param message 
