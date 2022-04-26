@@ -27,7 +27,6 @@ export const BackgroundContainer: FC<BgProps> = ({background, children, height, 
 
     const xOffset = ((mouse.x-wsize.width/2)/wsize.width) * wiggleRoom * (invertMouseEffect?1:-1)
     const yOffset = ((mouse.y-wsize.height/2)/wsize.height) * wiggleRoom * (invertMouseEffect?1:-1)
-    console.log([xOffset, yOffset])
     // parallax
     const pOffset = scroll * 0.13
 
