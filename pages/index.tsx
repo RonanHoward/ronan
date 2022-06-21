@@ -63,7 +63,7 @@ const Home: NextPage = () => {
                             <div className='centerFlex' style={{position:'relative',marginTop:'10px'}}>
                                 <Link href='https://github.com/RonanHoward' passHref>
                                     <Avatar
-                                        src='/Github-Mark.png'
+                                        src='/GitHub-Mark.png'
                                         alt='Ronan Howard'
                                         sx={{width:'auto',height:'5em',marginTop:'2.5em',marginRight:'21px',cursor:'pointer'}}
                                         className={s.avatar}
