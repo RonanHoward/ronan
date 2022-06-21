@@ -1,6 +1,7 @@
 import { FC, useContext } from "react"
 import Link from 'next/link'
 import { ScrollPosition } from "../lib/context"
+import styled from "styled-components"
 
 export const StickyNavbar: FC = ({ }) => {
     const scroll = useContext(ScrollPosition)
@@ -20,17 +21,17 @@ export const StickyNavbar: FC = ({ }) => {
         }}>
             <Link href='/' passHref>
                 <a
-                    className='sticky navLink afterUnderline'
+                    className='navLink afterUnderline'
                 >Home</a>
             </Link>
             <Link href='https://github.com/RonanHoward' passHref>
                 <a
-                    className='sticky navLink afterUnderline'
+                    className='navLink afterUnderline'
                 >GitHub</a>
             </Link>
             <Link href='/contact' passHref>
                 <a
-                    className='sticky navLink afterUnderline'
+                    className='navLink afterUnderline'
                 >Contact</a>
             </Link>
         </nav>

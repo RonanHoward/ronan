@@ -47,17 +47,11 @@ nav {
             height: 2px;
         }
     }
-    .sticky {
-        color: black;
-        mix-blend-mode: difference;
-        &:after {
-            background: #000 !important;
-        }
-    }
 }
 
 footer {
     backdrop-filter: blur(21px);
+    background: rgba(0,0,0,0.7);
     color: #ffffff;
     text-align: center;
     padding: 3em 0;
