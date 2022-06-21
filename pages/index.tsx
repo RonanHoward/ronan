@@ -45,6 +45,12 @@ const Home: NextPage = () => {
                     <BackgroundCenterContainer includeContentContainer>
                         <h2>Welcome to my Website</h2>
                     </BackgroundCenterContainer>
+
+                    <div className={s.scrollAnimation}>
+                        <div className={s.chevron}></div>
+                        <div className={s.chevron}></div>
+                        <div className={s.chevron}></div>
+                    </div>
                 </BackgroundContainer>
 
                 <BackgroundContainer
