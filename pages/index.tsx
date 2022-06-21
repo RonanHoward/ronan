@@ -17,7 +17,7 @@ import ReactTextTransition from 'react-text-transition'
 const Home: NextPage = () => {
 
     // cycling text
-    const [adjective, setAdjective] = useState({i:-1,adjectives:['Beautiful','Fast','Secure','Interactive']})
+    const [adjective, setAdjective] = useState({i:-1,adjectives:['Beautiful','Fast','Secure','Interactive','Expandable','Optimized','Unique']})
     useEffect(() => {
         const intervalId = setTimeout(() => {
             if (adjective.i > adjective.adjectives.length - 2) {
