@@ -73,7 +73,10 @@ const Contact: NextPage = ({ }) => {
                             <button
                                 className='green'
                                 onClick={() => {
-                                    sendContactMessage(str(name), str(email), str(message))
+                                    sendContactMessage(
+                                        str(name), str(email).trim(), str(message), '', // states
+                                        [setName, setEmail, setMessage]
+                                    )
                                 }}
                             >Submit</button>
                             <Spacer width='5px' />

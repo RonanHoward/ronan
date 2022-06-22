@@ -1,4 +1,5 @@
 import { addDoc, collection } from "firebase/firestore"
+import { Dispatch, SetStateAction } from "react"
 import toast from "react-hot-toast"
 import { db } from "./firebaseConfig"
 
@@ -24,7 +25,8 @@ export const isMobile = (pageWidth:number) => { return pageWidth <= 768 }
  * @param email 
  * @param message 
  */
-export const sendContactMessage = (name: string, email: string, message: string, uid: string = '') => {
+export const sendContactMessage = (name: string, email: string, message: string, uid: string = '', dispatches: Array<Dispatch<SetStateAction<string>>>) => {
+    
     console.log({name, email, message, uid})
 
     if ( emailRegex.test(email) ) {
@@ -44,7 +46,12 @@ export const sendContactMessage = (name: string, email: string, message: string,
                     success: 'Message Sent!',
                     error: 'An error occured while trying to send your message'
                 }
-            )
+            ).then(() => {
+                // clear all states if successful
+                dispatches[0]('')
+                dispatches[1]('')
+                dispatches[2]('')
+            })
         } else {
             toast.error('Please enter a name and a message')
         }
