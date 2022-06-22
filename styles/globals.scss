@@ -112,4 +112,10 @@ button {
         transition: background-color 0.4s;
         &:hover { background-color: #cccccc; }
     }
+    &.blue {
+        color: #ffffff;
+        background: #396EB0;
+        transition: background-color 0.4s;
+        &:hover { background-color: #194E90; }
+    }
 }

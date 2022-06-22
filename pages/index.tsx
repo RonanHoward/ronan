@@ -88,12 +88,18 @@ const Home: NextPage = () => {
                                 Freelance Website Developer
                             </p>
                             <p>
-                                I{"'"}ve dedicated my whole life to the computer sciences. I started programming in the second grade and started developing websites in the fourth grade. After years of working with javascript web development, I{"'"}ve not only become an optimized web developer, but I{"'"}ve become a skilled artist.
+                                I{"'"}ve dedicated my whole life to the computer sciences. I started programming in the second grade and started developing websites in the fourth grade. After years of working with javascript web development, I{"'"}ve not only become an optimized web developer, but I{"'"}ve also become a skilled artist.
                             </p>
                         </Container>
                         <p style={{fontSize:'2em'}}>
                             Get your own {adjective.i !== -1 && <ReactTextTransition style={{margin: "0 4px"}} inline>{adjective.adjectives[adjective.i]}</ReactTextTransition>} Website
                         </p>
+
+                        <Link href='/contact' passHref>
+                            <button className='blue' style={{fontSize:'1.1em',padding:'20px 25px',marginTop:'15px'}}>
+                                Send Me A Message
+                            </button>
+                        </Link>
                     </BackgroundContentContainer>
                     <Spacer height="200px"/>
                     <Footer />
